@@ -1,0 +1,8 @@
+i : INT = 5
+ i : INT = 6
+
+j = i + 23 : INT
+
+24 * k 
+
+i : INT = 9
