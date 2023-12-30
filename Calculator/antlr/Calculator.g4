@@ -1,4 +1,5 @@
 grammar Calculator; 
+import CommonLexerRules;
 
 @header {package antlr;}
 
@@ -18,14 +19,3 @@ expr: expr '*' expr
     | ID 
     | '(' expr ')'
     ;
-
-ID: [a-zA-Z]+
-    ; 
-
-INT: [0-9]+
-   ; 
-
-NEWLINE: '\r'? '\n'
-       ;
-    
-WS : [ \t]+ -> skip;
