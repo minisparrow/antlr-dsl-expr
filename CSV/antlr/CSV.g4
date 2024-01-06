@@ -9,11 +9,13 @@ header: row;
 
 row: field (','  field)* '\r'? '\n'; 
 
-field: TEXT
-    | STRING
-    |
+field: TEXT  # text
+    | STRING # string
+    | # empty
     ; 
 
 
-TEXT: ~[,\r\n]+; // one or more none , or none \r or none \n
+TEXT: ~[,\r\n"]+; // one or more none , or none \r or none \n
 STRING: '"'  ('""'|~'"')* '"';
+
+WS: [\n\r ]->skip;
